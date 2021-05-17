@@ -1,0 +1,2 @@
+class Frizure < ApplicationRecord
+end

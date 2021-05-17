@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tip:</strong>
+  <%= @frizure.tip %>
+</p>
+
+<p>
+  <strong>Cijena:</strong>
+  <%= @frizure.cijena %>
+</p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @frizure.opis %>
+</p>
+
+<%= link_to 'Edit', edit_frizure_path(@frizure) %> |
+<%= link_to 'Back', frizures_path %>
