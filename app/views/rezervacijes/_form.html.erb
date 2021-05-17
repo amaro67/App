@@ -1,0 +1,32 @@
+<%= form_with(model: rezervacije) do |form| %>
+  <% if rezervacije.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rezervacije.errors.count, "error") %> prohibited this rezervacije from being saved:</h2>
+
+      <ul>
+        <% rezervacije.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :klijent %>
+    <%= form.text_field :klijent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :frizura %>
+    <%= form.text_field :frizura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :datum %>
+    <%= form.text_field :datum %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

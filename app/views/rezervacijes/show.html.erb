@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Klijent:</strong>
+  <%= @rezervacije.klijent %>
+</p>
+
+<p>
+  <strong>Frizura:</strong>
+  <%= @rezervacije.frizura %>
+</p>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @rezervacije.datum %>
+</p>
+
+<%= link_to 'Edit', edit_rezervacije_path(@rezervacije) %> |
+<%= link_to 'Back', rezervacijes_path %>

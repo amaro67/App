@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rezervacijes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Klijent</th>
+      <th>Frizura</th>
+      <th>Datum</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rezervacijes.each do |rezervacije| %>
+      <tr>
+        <td><%= rezervacije.klijent %></td>
+        <td><%= rezervacije.frizura %></td>
+        <td><%= rezervacije.datum %></td>
+        <td><%= link_to 'Show', rezervacije %></td>
+        <td><%= link_to 'Edit', edit_rezervacije_path(rezervacije) %></td>
+        <td><%= link_to 'Destroy', rezervacije, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rezervacije', new_rezervacije_path %>
