@@ -1,0 +1,2 @@
+class Klijenti < ApplicationRecord
+end

@@ -1,0 +1,32 @@
+<%= form_with(model: klijenti) do |form| %>
+  <% if klijenti.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(klijenti.errors.count, "error") %> prohibited this klijenti from being saved:</h2>
+
+      <ul>
+        <% klijenti.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ime %>
+    <%= form.text_field :ime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prezime %>
+    <%= form.text_field :prezime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :broj %>
+    <%= form.text_field :broj %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
