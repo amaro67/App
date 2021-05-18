@@ -1,13 +1,62 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Frizures</h1>
 
-<table>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Frizerski studio Elma</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<br>
+<div class="container"
+<div class="row" style="height:200px">
+  <div class="col-sm-3">
+    </div>
+
+  <div class="col-sm-6">
+    <h1>Frizures</h1>
+
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Tip</th>
-      <th>Cijena</th>
-      <th>Opis</th>
+      <th scope="col">Tip</th>
+      <th scope="col">Cijena</th>
+      <th scope="col">Opis</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,13 +67,20 @@
         <td><%= frizure.tip %></td>
         <td><%= frizure.cijena %></td>
         <td><%= frizure.opis %></td>
-        <td><button type="button" class="btn btn-warning"><%= link_to 'Show', frizure %></button></td>
-        <td><%= link_to 'Edit', edit_frizure_path(frizure) %></td>
-        <td><%= link_to 'Destroy', frizure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button type="button" class="btn btn-dark"><%= link_to 'Show', frizure %></button></td>
+        <td><button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_frizure_path(frizure) %></button</td>
+        <td><button type="button" class="btn btn-dark"><%= link_to 'Destroy', frizure, method: :delete, data: { confirm: 'Are you sure?' } %></button</td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+<div class="col-sm-3">
+  </div>
+
 
 <br>
-<%= link_to 'New Frizure', new_frizure_path %>
+
+<button type="button" class="btn btn-warning"><%= link_to 'New Frizure', new_frizure_path %></button>
+</div>
+</div>
