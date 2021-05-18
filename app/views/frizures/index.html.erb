@@ -18,7 +18,7 @@
         <td><%= frizure.tip %></td>
         <td><%= frizure.cijena %></td>
         <td><%= frizure.opis %></td>
-        <td><%= link_to 'Show', frizure %></td>
+        <td><button type="button" class="btn btn-warning"><%= link_to 'Show', frizure %></button></td>
         <td><%= link_to 'Edit', edit_frizure_path(frizure) %></td>
         <td><%= link_to 'Destroy', frizure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
