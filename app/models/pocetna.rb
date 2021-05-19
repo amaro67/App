@@ -1,0 +1,2 @@
+class Pocetna < ApplicationRecord
+end
