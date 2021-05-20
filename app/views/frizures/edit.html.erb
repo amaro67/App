@@ -1,11 +1,11 @@
 <%= render 'shared/navbar' %>
 
- <h1>Editing Frizure</h1>
+ <h1 style="text-align:center; margin-top:100px">Editing Frizure</h1>
 
 <%= render 'form', frizure: @frizure %>
 
-<%= link_to 'Show', @frizure %> |
-<%= link_to 'Back', frizures_path %>
+<button type="button" class="btn btn-dark"><%= link_to 'Show', @frizure %></button> |
+<button type="button" class="btn btn-dark"><%= link_to 'Back', frizures_path %></button>
 
 
 <%= render 'shared/bottomm' %>
