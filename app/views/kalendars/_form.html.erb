@@ -1,0 +1,17 @@
+<%= form_with(model: kalendar) do |form| %>
+  <% if kalendar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kalendar.errors.count, "error") %> prohibited this kalendar from being saved:</h2>
+
+      <ul>
+        <% kalendar.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

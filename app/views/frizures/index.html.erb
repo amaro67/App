@@ -1,0 +1,65 @@
+<%= render 'shared/navbar' %>
+<p id="notice"><%= notice %></p>
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+  </head>
+
+<body>
+<div class="container"
+<div class="row" style="height:100px; margin-top:100px">
+<div style="row" class="col-sm-12">
+    <h1 style="text-align:center">Frizures</h1>
+    </div>
+    </div>
+    </div>
+    <br>
+
+    <div clsss="container">
+      <div class="row" style="margin-left:50px; margin-right:50px">
+        <div class="col-sm-12">
+
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Tip</th>
+      <th scope="col">Cijena</th>
+      <th scope="col">Opis</th>
+      <th scope="col">Prikaz</th>
+      <th scope="col">Uderivanje</th>
+      <th scope="col">Izbrisi</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+      <% @frizures.each do |frizure| %>
+    <tr>
+      <th scope="row"><%= frizure.id %></th>
+      <td> <%= frizure.tip %></td>
+      <td><%= frizure.cijena %></td>
+      <td><%= frizure.opis %></td>
+      <td><button type="button" class="btn btn-dark"><%= link_to 'Show', frizure %> </button></td>
+      <td><button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_frizure_path(frizure) %> </button</td>
+      <td><button type="button" class="btn btn-dark"><%= link_to 'Destroy', frizure, method: :delete, data: { confirm: 'Are you sure?' } %></button</td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
+<div class="row" style="margin-left:50px; margin-right:50px">
+  <div class="col-sm-12 text-center">
+<button type="button" class="btn btn-warning"><%= link_to 'New Frizure', new_frizure_path %></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+<br>
+<br>
+
+<%= render 'shared/bottomm' %>

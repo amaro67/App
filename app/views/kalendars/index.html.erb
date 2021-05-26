@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kalendars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kalendars.each do |kalendar| %>
+      <tr>
+        <td><%= link_to 'Show', kalendar %></td>
+        <td><%= link_to 'Edit', edit_kalendar_path(kalendar) %></td>
+        <td><%= link_to 'Destroy', kalendar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kalendar', new_kalendar_path %>

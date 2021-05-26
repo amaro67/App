@@ -1,0 +1,96 @@
+<p id="notice"><%= notice %></p>
+<%= render 'shared/navbar' %>
+
+
+
+
+
+<body>
+  <body>
+  <div class="container"
+  <div class="row" style="height:100px; margin-top:100px">
+  <div style="row" class="col-sm-12">
+      <h1 style="text-align:center">Klijenti</h1>
+      </div>
+      </div>
+      </div>
+      <br>
+
+      <div clsss="container">
+        <div class="row" style="margin-left:50px; margin-right:50px">
+          <div class="col-sm-12">
+
+      <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Ime</th>
+        <th scope="col">Prezime</th>
+        <th scope="col">Broj</th>
+        <th scope="col">Prikaz</th>
+        <th scope="col">Uderivanje</th>
+        <th scope="col">Izbrisi</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+        <% @klijentis.each do |klijenti| %>
+      <tr>
+        <th scope="row"><%= klijenti.id %></th>
+          <td> <%= klijenti.ime %></td>
+        <td><%= klijenti.prezime %></td>
+        <td><%= klijenti.broj %></td>
+        <td><button type="button" class="btn btn-dark"><%= link_to 'Show', klijenti %> </button></td>
+        <td><button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_klijenti_path(klijenti) %></button</td>
+        <td><button type="button" class="btn btn-dark"><%= link_to 'Destroy', klijenti, method: :delete, data: { confirm: 'Are you sure?' } %></button</td>
+      </tr>
+      <%end%>
+    </tbody>
+  </table>
+  <div class="row" style="margin-left:50px; margin-right:50px">
+    <div class="col-sm-12 text-center">
+  <button type="button" class="btn btn-warning"><%= link_to 'New Klijenti', new_klijenti_path %></button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  </body>
+  <br>
+  <br>
+  <br>
+  <%= render 'shared/bottomm' %>
+
+
+  </body>
+<!--<h1>Klijentis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ime</th>
+      <th>Prezime</th>
+      <th>Broj</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @klijentis.each do |klijenti| %>
+      <tr>
+        <td><%= klijenti.ime %></td>
+        <td><%= klijenti.prezime %></td>
+        <td><%= klijenti.broj %></td>
+        <td><%= link_to 'Show', klijenti %></td>
+        <td><%= link_to 'Edit', edit_klijenti_path(klijenti) %></td>
+        <td><%= link_to 'Destroy', klijenti, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Klijenti', new_klijenti_path %>-->

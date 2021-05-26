@@ -1,0 +1,51 @@
+<%= form_with(model: rezervacije) do |form| %>
+  <% if rezervacije.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rezervacije.errors.count, "error") %> prohibited this rezervacije from being saved:</h2>
+
+      <ul>
+        <% rezervacije.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+  <div class="field">
+    <%= form.label :klijent %>
+    <select class="form-select" aria-label="Default select example" name="rezervacije[klijent]" id="rezervacije_klijent">
+      <% @klijenti = Klijenti.all %>
+      <% for klijent in @klijenti %>
+  <option value="<%= klijent.id%>"><%=klijent.ime%></option>
+      <% end %>
+
+
+    </select>
+  </div>
+
+  <div class="field">
+    <%= form.label :frizura %>
+    <select class="form-select" aria-label="Default select example" name="rezervacije[frizura]" id="rezervacije_frizura">
+      <% @frizure= Frizure.all %>
+      <% for frizura in @frizure %>
+  <option value="<%= frizura.id%>"><%=frizura.tip%></option>
+      <% end %>
+
+
+    </select>
+  </div>
+
+  <%= simple_form_for @event do |f|%>
+  <%  = f.input :when, as: :date_time_pickr %>
+  <div class="field">
+    <%= form.label :datum %>
+    <%= form.text_field :datum %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

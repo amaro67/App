@@ -1,0 +1,2 @@
+module FrizuresHelper
+end

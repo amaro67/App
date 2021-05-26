@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+<%= render 'shared/navbar' %>
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+  </head>
+
+<body>
+<div class="container"
+<div class="row" style="height:100px; margin-top:100px">
+<div style="row" class="col-sm-12">
+    <h1 style="text-align:center">Rezervacije</h1>
+    </div>
+    </div>
+    </div>
+    <br>
+
+    <div clsss="container">
+      <div class="row" style="margin-left:50px; margin-right:50px">
+        <div class="col-sm-12">
+
+    <table class="table">
+  <thead class="thead-dark">
+
+    <tr>
+      <th scope="col">Klijent</th>
+      <th scope="col">Frizura</th>
+      <th scope="col">Datum</th>
+      <th scope="col">Prikaz</th>
+      <th scope="col">Uderivanje</th>
+      <th scope="col">Izbrisi</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rezervacijes.each do |rezervacije| %>
+      <tr>
+        <td scope="row"><%= rezervacije.klijent %>  <%= Klijenti.find(rezervacije.klijent).ime %></td>
+        <td><%= rezervacije.frizura %>  <%= Frizure.find(rezervacije.frizura).tip %></td>
+        <td><%= rezervacije.datum %></td>
+        <td><button type="button" class="btn btn-dark"><%= link_to 'Show', rezervacije %></button></td>
+        <td><button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_rezervacije_path(rezervacije) %></button></td>
+        <td><button type="button" class="btn btn-dark"><%= link_to 'Destroy', rezervacije, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="row" style="margin-left:50px; margin-right:50px">
+  <div class="col-sm-12 text-center">
+<button type="button" class="btn btn-warning"><%= link_to 'New Rezervacije', new_rezervacije_path %></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+<br>
+<%= render 'shared/bottomm' %>
+
+
+<br>

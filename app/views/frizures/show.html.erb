@@ -1,0 +1,21 @@
+<%= render 'shared/navbar' %>
+<p id="notice"><%= notice %></p>
+<h1 style="text-align:center; margin-top:100px">Izabrali ste...</h1>
+<p style="margin-top:50px">
+
+  <h3>Tip: <%= @frizure.tip %> </h3>
+
+</p>
+
+<p>
+  <h3>Cijena: <%= @frizure.cijena %></h3>
+
+</p>
+
+<p>
+  <h3>Opis:<%= @frizure.opis %></h3>
+
+</p>
+
+<button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_frizure_path(@frizure) %></button> |
+<button type="button" class="btn btn-dark"><%= link_to 'Back', frizures_path %></button>

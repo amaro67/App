@@ -1,0 +1,17 @@
+<%= form_with(model: kontakt) do |form| %>
+  <% if kontakt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kontakt.errors.count, "error") %> prohibited this kontakt from being saved:</h2>
+
+      <ul>
+        <% kontakt.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
